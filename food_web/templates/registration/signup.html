@@ -1,0 +1,17 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <section id="login" class="container content-section">
+        <div class="row">
+            <div class=" ">
+                <form method="POST" action='.'>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+{#                    <input type='submit' value="Sign up">#}
+                    <input type='submit' value="Sign up!" class="btn btn-default">
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

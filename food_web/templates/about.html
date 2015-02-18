@@ -1,0 +1,65 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Food.Now</h1>
+                        <p class="intro-text">A better way to eat</p>
+                        <a href="{% url 'index2' %}" class="btn btn-default btn-lg">>
+                            Get Started!</a>
+                        <a href="#about" class="btn btn-default btn-lg page-scroll">
+                            Confused?</a>
+{#                        <a href="#about" class="btn btn-circle page-scroll">#}
+{#                            <i class="fa fa-angle-double-down animated"></i>#}
+{#                        </a>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Food.Now</h2>
+                <p>
+                    Food.Now is dedicated to a simple belief. That you're hungry. That you're adventurous.<br>
+                    That the "same old thing" is a death knell for your taste buds. And that you want Food. Now.
+                </p>
+
+                <a href="{% url 'index2' %}" class="btn btn-default btn-lg">Get Started
+                    {% if user.is_authenticated %}{{ user.username }} {% endif %}
+                </a><br><br>
+
+                <p>It works as follows: those <span style="font-weight:bold;color:#219ab3;">Get Started</span> buttons? Click one.<br>
+                    We'll find you some food within walking distance and tell you how to get there.<br>
+                    Or click the orange <span style="color:#C0821F;font-weight:bold;">Start</span> menu button. We're not picky.</p>
+{#                    click <span style="color:#C0821F;font-weight:bold;">Start</span>. The big orange button in the menu above. That's the one. Then eat. Pretty self-explanatory. <br> You can also click the <span style="font-weight:bold;color:#219ab3;">Get Started</span> button below. We're not picky.</p>#}
+
+{#                <a href="{% url 'index2' %}" class="btn btn-default btn-lg">Get Started#}
+{#                    {% if user.is_authenticated %}{{ user.username }} {% endif %}#}
+{#                </a>#}
+                <p></p>
+
+                {% if not user.is_authenticated %}
+                <p>
+                    <a href="{% url 'signup' %}" class="btn btn-default btn-lg">Sign Up</a>
+                </p>
+                <p>
+                    If you haven't signed up yet, try it out! You'll receive recommendations
+                    customized to your tastes, recent food history (and even pesky allergies).
+                </p>
+                <p>Otherwise, please <a href="{% url 'login' %}">log in.</a></p>
+                {% endif %}
+
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

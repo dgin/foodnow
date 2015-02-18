@@ -1,0 +1,35 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <br>
+    <section id="profile" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Welcome back <span style="color:#C0821F;">{{ user.username }}</span></h2>
+                <p>Last time you visited was {{ user.last_login }}</p>
+                <p>You joined us on {{ user.date_joined }}</p>
+
+                <p>Your account details are below:</p>
+{#                <br>#}
+                <p>
+                {% if user.first_name %}
+                    First name: {{ user.first_name }}<br>
+                {% endif %}
+                {% if user.last_name %}
+                    Last name: {{ user.last_name }}<br>
+                {% endif %}
+                Email: {{ user.email }}<br>
+                Would you like to <a href='{% url 'profile_edit' %}'>edit any
+                    account details?</a><br>
+                {% if not user.first_name or user.last_name %}
+                    (Maybe you'd like to enter in a name?)<br>
+                {% endif %}
+                </p>
+
+                <a href="{% url 'index2' %}" class="btn btn-default btn-lg">>Get Started!</a>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}

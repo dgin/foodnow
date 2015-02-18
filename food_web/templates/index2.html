@@ -1,0 +1,39 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    <!-- Restaurant Information Section -->
+    <section id="where" class="content-section text-center">
+        <div class="where-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Where You're Going</h2>
+                    <p id="food_info">Now Fooding...</p>
+
+                    <p  class="btn btn-default btn-lg" onclick="c1();resetDirections();">Reroll food?</p>
+                    {% if user.is_authenticated %}
+                        <br><br><br><br>
+                        <p class="btn btn-default btn-lg" onclick="alert('yay');">Loved it</p>
+                        <p class="btn btn-default btn-lg" onclick="alert('boo');">Hated it</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direction Section -->
+    <section id="directions" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Directions</h2>
+                <div id="someDirections">
+                    <p id="aDirection">Directions pending...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="map"></div>
+    <br></br>
+
+
+{% endblock content %}
