@@ -47,17 +47,18 @@ var restaurantMapper = {
     callback: function(results, status) {
 
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-            //console.log(results);
             //var foundGoodPlace = null;
             //var unwantedTypes = ['grocery_or_supermarket', 'bar', 'gas_station','convenience_store'];
             var rating = 0;
-
+            var is_open = false;
             // Does not return poorly rated restaurants
-            while (rating < 3.5) {
+            while (rating < 3.5 || is_open === false) {
             //    foundGoodPlace = null;
                 randomIndex = Math.ceil(Math.random() * results.length-1);
                 place = results[randomIndex];
+                //console.log(place);
                 rating = place.rating;
+                is_open = place.opening_hours.open_now;
             //
             //    //dance:
             //
