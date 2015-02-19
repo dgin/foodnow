@@ -47,29 +47,36 @@ var restaurantMapper = {
     callback: function(results, status) {
 
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-            var foundGoodPlace = null;
-            var unwantedTypes = ['grocery_or_supermarket', 'bar', 'gas_station','convenience_store'];
-            //while (foundGoodPlace !== true) {
-                console.log(results);
+            //console.log(results);
+            //var foundGoodPlace = null;
+            //var unwantedTypes = ['grocery_or_supermarket', 'bar', 'gas_station','convenience_store'];
+            var rating = 0;
+
+            // Does not return poorly rated restaurants
+            while (rating < 3.5) {
+            //    foundGoodPlace = null;
                 randomIndex = Math.ceil(Math.random() * results.length-1);
-                //console.log(randomIndex);
-                //console.log(results.length);
                 place = results[randomIndex];
-                //console.log(place);
-
-                //for (var i = 0; i < place.types.length; i++) {
-                //    for (var i = 0; i< unwantedTypes.length; i++) {
-                //        if (place.types[i] === unwantedTypes[i]) {
-                //            foundGoodPlace = false;
-                //            break;
-                //        }
-                //    }
-                //}
-                //if (foundGoodPlace !== false) {
-                //    foundGoodPlace = true;
-                //}
-
-            //}
+                rating = place.rating;
+            //
+            //    //dance:
+            //
+            //    for (var j = 0; j < place.types.length; j++) {
+            //        if (foundGoodPlace !== true) {
+            //            for (var i = 0; i< unwantedTypes.length; i++) {
+            //                if (place.types[i] === unwantedTypes[i]) {
+            //                    foundGoodPlace = false;
+            //                    break;
+            //                }
+            //            }
+            //        }
+            //
+            //    }
+            //    if (foundGoodPlace !== false) {
+            //        foundGoodPlace = true;
+            //    }
+            //
+            }
 
             coords = [place.geometry.location.k,place.geometry.location.D];
             $('#food_info').html(

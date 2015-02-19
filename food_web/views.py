@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from food_web.forms import ExtendedUserCreationForm, SimpleUserChangeForm
+from food_web.models import Restaurant
 
 
 def index(request):
@@ -43,3 +44,21 @@ def profile_edit(request):
     else:
         form = SimpleUserChangeForm(instance=request.user)
     return render(request, 'registration/profile_edit.html', {'form':form})
+
+def formModal(request):
+    if request.method == "POST":
+        form = ExtendedUserCreationForm(request.POST)
+        if form.is_valid():
+            if form.save():
+                return redirect('../login')
+    else:
+        form = ExtendedUserCreationForm()
+    return render(request, 'modal.html', {'form':form})
+
+def liked(request):
+    if request.method == "POST":
+        exists = Restaurant.objects.get(name=request.restaurant.name)
+        if (exists == False):
+            Restaurant.objects.create(name=request.restaurant.name)
+            pass
+        pass

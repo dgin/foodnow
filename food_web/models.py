@@ -24,9 +24,10 @@ class Place(models.Model):
 
 class Restaurant(models.Model):
     name = models.CharField(max_length = 60)
-    patron = models.ManyToManyField(User, null=True, blank=True)
+    patrons_loved = models.ManyToManyField(User, null=True, blank=True, related_name="loved")
+    patrons_hated = models.ManyToManyField(User, null=True, blank=True, related_name="hated")
     score = models.SmallIntegerField(null=True, blank=True)
-    genre = models.CharField(max_length = 100)
+    genre = models.CharField(max_length = 100, blank=True)
     # Put food types in text field separated by comma
     types_of_food = models.TextField(null=True, blank=True)
     allergy_flag = models.BooleanField(default=False)
