@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^index/$', 'food_web.views.index2', name='index2'),
     url(r'^about/$', 'food_web.views.about', name='about'),
 
-    # url(r'^liked/$', 'food_web.views.liked', name='liked'),
+    url(r'^like/$', 'food_web.views.like', name='like'),
 
     # User logistics, registration, etc.
     url(r'^profile/$', 'food_web.views.profile', name='profile'),

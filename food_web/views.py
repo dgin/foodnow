@@ -55,7 +55,7 @@ def formModal(request):
         form = ExtendedUserCreationForm()
     return render(request, 'modal.html', {'form':form})
 
-def liked(request):
+def like(request):
     if request.method == "POST":
         exists = Restaurant.objects.get(name=request.restaurant.name)
         if (exists == False):

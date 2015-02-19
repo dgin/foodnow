@@ -21,7 +21,7 @@
                 Email: {{ user.email }}<br>
                 Would you like to <a href='{% url 'profile_edit' %}'>edit any
                     account details?</a><br>
-                {% if not user.first_name or user.last_name %}
+                {% if not user.first_name and not user.last_name %}
                     (Maybe you'd like to enter in a name?)<br>
                 {% endif %}
                 </p>

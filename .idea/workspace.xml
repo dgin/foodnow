@@ -36,9 +36,13 @@
       <file leaf-file-name="dfd_alt.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food_web/static/js/dfd_alt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="4400">
-              <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4186" max-vertical-offset="4642">
+              <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+              <folding>
+                <marker date="1424368599000" expanded="true" signature="7359:7470" placeholder="{...}" />
+                <marker date="1424368599000" expanded="true" signature="7374:7465" placeholder="{&quot;type&quot;: &quot;POST&quot;...}" />
+                <marker date="1424368599000" expanded="true" signature="7441:7457" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,11 +57,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/food_web/templates/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2682353" vertical-offset="326" max-vertical-offset="880">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food_web/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="973" max-vertical-offset="1540">
-              <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1540">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -68,7 +82,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/foodnow/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="726">
+            <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="726">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
@@ -78,8 +92,8 @@
       <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food_web/templates/index2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.838709" vertical-offset="0" max-vertical-offset="968">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            <state vertical-scroll-proportion="-4.2580647" vertical-offset="220" max-vertical-offset="1012">
+              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -88,18 +102,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food_web/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.64" vertical-offset="0" max-vertical-offset="924">
-              <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19298245" vertical-offset="0" max-vertical-offset="456">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="924">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -108,8 +112,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/foodnow/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2134">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2222">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -159,21 +163,21 @@
         <option value="$PROJECT_DIR$/food_web/templates/registration/profile_edit.html" />
         <option value="$PROJECT_DIR$/food_web/static/js/dfd.js" />
         <option value="$PROJECT_DIR$/food_web/templates/base_template.html" />
-        <option value="$PROJECT_DIR$/food_web/templates/profile.html" />
         <option value="$PROJECT_DIR$/local_settings.py" />
         <option value="$PROJECT_DIR$/food_web/static/bootstrap/grayscale/css/grayscale.css" />
-        <option value="$PROJECT_DIR$/food_web/templates/index2.html" />
         <option value="$PROJECT_DIR$/food_web/templates/registration/signup.html" />
         <option value="$PROJECT_DIR$/food_web/templates/modal.html" />
         <option value="$PROJECT_DIR$/food_web/templates/hated.html" />
         <option value="$PROJECT_DIR$/food_web/templates/liked.html" />
-        <option value="$PROJECT_DIR$/foodnow/urls.py" />
         <option value="$PROJECT_DIR$/food_web/models.py" />
-        <option value="$PROJECT_DIR$/foodnow/settings.py" />
-        <option value="$PROJECT_DIR$/food_web/views.py" />
         <option value="$PROJECT_DIR$/food_web/templates/about.html" />
-        <option value="$PROJECT_DIR$/food_web/static/js/dfd_alt.js" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/food_web/views.py" />
+        <option value="$PROJECT_DIR$/food_web/templates/index2.html" />
+        <option value="$PROJECT_DIR$/foodnow/urls.py" />
+        <option value="$PROJECT_DIR$/foodnow/settings.py" />
+        <option value="$PROJECT_DIR$/food_web/static/js/dfd_alt.js" />
+        <option value="$PROJECT_DIR$/food_web/templates/profile.html" />
       </list>
     </option>
   </component>
@@ -787,7 +791,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/food_web/views.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1045,14 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food_web/templates/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2580645" vertical-offset="216" max-vertical-offset="880">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food_web/static/bootstrap/grayscale/css/grayscale.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7903" max-vertical-offset="8448">
@@ -1125,24 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/foodnow/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="726">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_web/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="973" max-vertical-offset="1540">
-          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food_web/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16129032" vertical-offset="2161" max-vertical-offset="2574">
@@ -1151,18 +1136,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food_web/templates/index2.html">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.838709" vertical-offset="0" max-vertical-offset="968">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.19298245" vertical-offset="0" max-vertical-offset="456">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food_web/static/js/dfd_alt.js">
+    <entry file="file://$PROJECT_DIR$/food_web/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="4400">
-          <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="924">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1540">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_web/templates/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.2580647" vertical-offset="220" max-vertical-offset="1012">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foodnow/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="726">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1177,24 +1188,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/foodnow/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2134">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2222">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food_web/models.py">
+    <entry file="file://$PROJECT_DIR$/food_web/static/js/dfd_alt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.64" vertical-offset="0" max-vertical-offset="924">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4186" max-vertical-offset="4642">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding>
+            <marker date="1424368599000" expanded="true" signature="7359:7470" placeholder="{...}" />
+            <marker date="1424368599000" expanded="true" signature="7374:7465" placeholder="{&quot;type&quot;: &quot;POST&quot;...}" />
+            <marker date="1424368599000" expanded="true" signature="7441:7457" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/food_web/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19298245" vertical-offset="0" max-vertical-offset="456">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.2682353" vertical-offset="326" max-vertical-offset="880">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding />
         </state>
       </provider>

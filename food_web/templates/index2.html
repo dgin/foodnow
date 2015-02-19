@@ -13,8 +13,8 @@
                     <p  class="btn btn-default btn-lg" onclick="c1();resetDirections();">Reroll food?</p>
                     {% if user.is_authenticated %}
                         <br><br><br><br>
-                        <p class="btn btn-default btn-lg" onclick="alert('yay');">Loved it</p>
-                        <p class="btn btn-default btn-lg" onclick="alert('boo');">Hated it</p>
+                        <p class="btn btn-default btn-lg" id="like" onclick="alert('yay');">Loved it</p>
+                        <p class="btn btn-default btn-lg" id="hate" onclick="alert('boo');">Hated it</p>
                     {% endif %}
                 </div>
             </div>

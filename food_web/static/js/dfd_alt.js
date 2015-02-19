@@ -173,3 +173,14 @@ function resetDirections() {
 
 c1();
 //google.maps.event.addDomListener(window, 'load', directionsFinder.initialize(1,2));
+
+// Onclick event for like and hate button
+//$.('#like').click(function(){
+//    $.ajax({
+//        type: "POST",
+//        url: "/like/",
+//        data: {
+//
+//        }
+//    })
+//});
