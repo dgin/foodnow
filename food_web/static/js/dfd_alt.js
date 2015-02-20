@@ -81,8 +81,8 @@ var restaurantMapper = {
 
             coords = [place.geometry.location.k,place.geometry.location.D];
             $('#food_info').html(
-                '<p style="font-weight:bold;color:#C0821F">' + place.name + '</p>' +
-                '<p>' + place.vicinity + '</p>' +
+                '<p id="restaurant_name" name="' + place.name + '" style="font-weight:bold;color:#C0821F">' + place.name + '</p>' +
+                '<p id="restaurant_address" name="' + place.vicinity + '">' + place.vicinity + '</p>' +
                 '<p>' +coords[0]+','+coords[1]+'</p>'
             );
 
@@ -175,12 +175,45 @@ c1();
 //google.maps.event.addDomListener(window, 'load', directionsFinder.initialize(1,2));
 
 // Onclick event for like and hate button
-//$.('#like').click(function(){
-//    $.ajax({
-//        type: "POST",
-//        url: "/like/",
-//        data: {
-//
-//        }
-//    })
-//});
+$('#hate').click(function(){
+    $.ajax({
+        type: "POST",
+        url: "/hate/",
+        data: {
+            'restaurant_name': $('#restaurant_name').attr('name'),
+            'restaurant_address': $('#restaurant_address').attr('name')
+            //'csrfmiddlewaretoken': 'csrf_token'
+        },
+        dataType: "json",
+        success: function(response) {
+            alert("Like made an ajax!")
+        },
+        error: function(response, error) {
+            $('#likehate_response').html("Thanks for providing feedback. We'll find you a better place next time.")
+            //alert(response.responseText);
+            //alert("Something went wrong with the voting process. Please try again.")
+        }
+    });
+});
+
+$('#like').click(function(){
+    $.ajax({
+        type: "POST",
+        url: "/like/",
+        data: {
+            'restaurant_name': $('#restaurant_name').attr('name'),
+            'restaurant_address': $('#restaurant_address').attr('name')
+            //'csrfmiddlewaretoken': 'csrf_token'
+        },
+        dataType: "json",
+        success: function(response) {
+            alert("Like made an ajax!")
+        },
+        error: function(response, error) {
+            $('#likehate_response').html("Thanks for providing feedback! We're glad you liked it.")
+            //alert("Thanks for providing feedback! We're glad you liked it.")
+            //alert(response.responseText);
+            //alert("Something went wrong with the voting process. Please try again.")
+        }
+    });
+});

@@ -24,6 +24,7 @@ class Place(models.Model):
 
 class Restaurant(models.Model):
     name = models.CharField(max_length = 60)
+    location = models.CharField(max_length=100, blank = True, null = True)
     patrons_loved = models.ManyToManyField(User, null=True, blank=True, related_name="loved")
     patrons_hated = models.ManyToManyField(User, null=True, blank=True, related_name="hated")
     score = models.SmallIntegerField(null=True, blank=True)

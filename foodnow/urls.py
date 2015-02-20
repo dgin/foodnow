@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^about/$', 'food_web.views.about', name='about'),
 
     url(r'^like/$', 'food_web.views.like', name='like'),
+    url(r'^hate/$', 'food_web.views.hate', name='hate'),
 
     # User logistics, registration, etc.
     url(r'^profile/$', 'food_web.views.profile', name='profile'),
