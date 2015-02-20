@@ -27,6 +27,8 @@ class Restaurant(models.Model):
     location = models.CharField(max_length=100, blank = True, null = True)
     patrons_loved = models.ManyToManyField(User, null=True, blank=True, related_name="loved")
     patrons_hated = models.ManyToManyField(User, null=True, blank=True, related_name="hated")
+    love_count = models.SmallIntegerField(default=0)
+    hate_count = models.SmallIntegerField(default=0)
     score = models.SmallIntegerField(null=True, blank=True)
     genre = models.CharField(max_length = 100, blank=True)
     # Put food types in text field separated by comma

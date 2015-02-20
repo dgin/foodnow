@@ -64,7 +64,9 @@ def like(request):
         print request.user
         restaurant, exists = Restaurant.objects.get_or_create(name=request.POST['restaurant_name'], location=request.POST['restaurant_address'])
         restaurant.patrons_loved.add(request.user.id)
-        return HttpResponse(status=200)
+        restaurant.love_count += 1
+        restaurant.save()
+        return HttpResponse("Thanks for providing feedback! We're glad you liked it. " + str(restaurant.love_count-1) + " other people loved it too.<br>" + str(restaurant.hate_count) + " people hated it.",status_code=202)
 
 @csrf_exempt
 def hate(request):
@@ -73,4 +75,10 @@ def hate(request):
         print request.user
         restaurant, exists = Restaurant.objects.get_or_create(name=request.POST['restaurant_name'], location=request.POST['restaurant_address'])
         restaurant.patrons_hated.add(request.user.id)
-        return HttpResponse(status=202)
+        restaurant.hate_count += 1
+        restaurant.save()
+        response = HttpResponse()
+        response.status_code = 202
+        response.content = "Thanks for providing feedback. We'll find you a better place next time." + str(restaurant.hate_count-1) + " other people agreed that it was terrible. <br>" + str(restaurant.love_count) + " people actually liked it."
+        return response
+        # return HttpResponse("Thanks for providing feedback. We'll find you a better place next time." + str(restaurant.hate_count-1) + " other people agreed that it was terrible and " + str(restaurant.love_count) + " people loved it.",status_code=202)

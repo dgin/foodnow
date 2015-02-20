@@ -10,7 +10,7 @@
                     <h2>Where You're Going</h2>
                     <p id="food_info">Now Fooding...</p>
 
-                    <p  class="btn btn-default btn-lg" onclick="c1();resetDirections();">Reroll food?</p>
+                    <p id="reroll" class="btn btn-default btn-lg" onclick="c1();resetDirections();">Reroll food?</p>
                     {% if user.is_authenticated %}
                         <br><br><br><br>
                         <p class="btn btn-default btn-lg" id="like">Loved it</p>
@@ -32,6 +32,8 @@
                 <div id="someDirections">
                     <p id="aDirection">Directions pending...</p>
                 </div>
+                <a href="#food_info" class="btn btn-default btn-lg
+                page-scroll">Rate your experience!</a>
             </div>
         </div>
     </section>

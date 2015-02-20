@@ -37,7 +37,8 @@ var restaurantMapper = {
         //Change radius depending on where you are!
         radius: '500',
         types: ['restaurant', 'bakery', 'cafe'],
-        rankby: 'distance'
+        rankby: 'PROMINENCE',
+        openNow: 'true'
       };
 
     service = new google.maps.places.PlacesService(map);
@@ -47,18 +48,25 @@ var restaurantMapper = {
     callback: function(results, status) {
 
         if (status == google.maps.places.PlacesServiceStatus.OK) {
+            //console.log(results);
             //var foundGoodPlace = null;
-            //var unwantedTypes = ['grocery_or_supermarket', 'bar', 'gas_station','convenience_store'];
+            //var unwantedTypes = ['grocery_or_supermarket', 'gas_station','convenience_store'];
             var rating = 0;
-            var is_open = false;
-            // Does not return poorly rated restaurants
-            while (rating < 3.5 || is_open === false) {
+            //var price = 5;
+            // Does not return poorly rated restaurants or highly priced ones
+            // Will be changeable later
+            while (rating < 3.5) {
             //    foundGoodPlace = null;
                 randomIndex = Math.ceil(Math.random() * results.length-1);
                 place = results[randomIndex];
                 //console.log(place);
                 rating = place.rating;
-                is_open = place.opening_hours.open_now;
+                //if (place.price) {
+                //    price = place.price_level;
+                //}
+                //else {
+                //    price = 0;
+                //}
             //
             //    //dance:
             //
@@ -81,9 +89,10 @@ var restaurantMapper = {
 
             coords = [place.geometry.location.k,place.geometry.location.D];
             $('#food_info').html(
-                '<p id="restaurant_name" name="' + place.name + '" style="font-weight:bold;color:#C0821F">' + place.name + '</p>' +
+                '<p id="restaurant_name" name="' + place.name + '" style="font-weight:bold;color:#c0821f">' + place.name + '</p>' +
                 '<p id="restaurant_address" name="' + place.vicinity + '">' + place.vicinity + '</p>' +
-                '<p>' +coords[0]+','+coords[1]+'</p>'
+                //'<p>' +coords[0]+','+coords[1]+'</p>'
+                '<p> Price level (out of four): ' + place.price_level + '</p>'
             );
 
             // Callback to function directionsFinder.calcRoute
@@ -92,9 +101,11 @@ var restaurantMapper = {
 
     }
 };
-var directionsDisplay;
+//var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var directionsFinder = {
+
+    // Initializes the directions render. Unnecessary and broken.
     //initialize : function(lat, lng) {
     //    directionsDisplay = new google.maps.DirectionsRenderer();
     //    var mapOptions = {
@@ -153,7 +164,6 @@ function cleanupCSS() {
         "background-color" : "#C0821F",
         "color": "#000"
     });
-    //console.log("Done.");
 }
 
 
@@ -164,11 +174,13 @@ function test(data) {
 
 function c1() {
     // Callback to function test
-    navigator.geolocation.getCurrentPosition(test)
+    navigator.geolocation.getCurrentPosition(test);
 }
 
+// Cleans up the HTML on a new roll
 function resetDirections() {
     $('#someDirections').html("");
+    $('#likehate_response').html("");
 }
 
 c1();
@@ -186,10 +198,10 @@ $('#hate').click(function(){
         },
         dataType: "json",
         success: function(response) {
-            alert("Like made an ajax!")
+            alert("Like made an ajax!");
         },
         error: function(response, error) {
-            $('#likehate_response').html("Thanks for providing feedback. We'll find you a better place next time.")
+            $('#likehate_response').html(response.responseText);
             //alert(response.responseText);
             //alert("Something went wrong with the voting process. Please try again.")
         }
@@ -210,9 +222,7 @@ $('#like').click(function(){
             alert("Like made an ajax!")
         },
         error: function(response, error) {
-            $('#likehate_response').html("Thanks for providing feedback! We're glad you liked it.")
-            //alert("Thanks for providing feedback! We're glad you liked it.")
-            //alert(response.responseText);
+            $('#likehate_response').html(response.responseText);
             //alert("Something went wrong with the voting process. Please try again.")
         }
     });
