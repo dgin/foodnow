@@ -66,7 +66,10 @@ def like(request):
         restaurant.patrons_loved.add(request.user.id)
         restaurant.love_count += 1
         restaurant.save()
-        return HttpResponse("Thanks for providing feedback! We're glad you liked it. " + str(restaurant.love_count-1) + " other people loved it too.<br>" + str(restaurant.hate_count) + " people hated it.",status_code=202)
+        response = HttpResponse()
+        response.status_code = 202
+        response.content = "Thanks for providing feedback! We're glad that you liked it." + str(restaurant.love_count-1) + " other people loved it too. <br>" + str(restaurant.hate_count) + " people actually liked it."
+        return response
 
 @csrf_exempt
 def hate(request):
