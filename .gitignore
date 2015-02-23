@@ -1,4 +1,4 @@
 local_settings.py
-local_settings.pyc
+*.pyc
 .DS_Store
-.idea
+.idea/*

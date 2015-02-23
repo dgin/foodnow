@@ -3,7 +3,7 @@ from fabric.api import *
 from fabric.contrib.files import upload_template
 
 
-env.hosts = ['52.10.53.236']
+env.hosts = ['52.10.107.241']
 env.user = 'ubuntu'
 env.key_filename = '~/.ssh/foodnow.pem'
 env.shell = "/bin/bash -l -i -c"
@@ -28,8 +28,8 @@ def restart_app():
 
 @task
 def deploy():
-    with prefix("workon blog_analytics"):
-        with cd("/home/ubuntu/rocketu_blog_analytics"):
+    with prefix("workon foodnow"):
+        with cd("/home/ubuntu/foodnow"):
             run("git pull origin master")
             run("pip install -r requirements.txt")
             run("python manage.py migrate")
