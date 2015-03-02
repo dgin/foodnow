@@ -68,7 +68,7 @@ def like(request):
         restaurant.save()
         response = HttpResponse()
         response.status_code = 202
-        response.content = "Thanks for providing feedback! We're glad that you liked it." + str(restaurant.love_count-1) + " other people loved it too. <br>" + str(restaurant.hate_count) + " people actually liked it."
+        response.content = "Thanks for providing feedback! We're glad that you liked it." + str(restaurant.love_count-1) + " other people loved it too. <br>" + str(restaurant.hate_count) + " people disliked it."
         return response
 
 @csrf_exempt

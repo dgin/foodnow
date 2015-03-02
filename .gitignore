@@ -4,4 +4,5 @@ local_settings.py
 .idea/*
 gunicorn*
 fabfile.py
-local_settomgs.py~
+local_settings.py~
+*settings.py
