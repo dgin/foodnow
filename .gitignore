@@ -2,7 +2,7 @@ local_settings.py
 *.pyc
 .DS_Store
 .idea/*
-gunicorn*
+gunicorn.*
 fabfile.py
 local_settings.py~
 *settings.py
